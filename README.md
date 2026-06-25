@@ -22,6 +22,10 @@ These are on top of the [default LazyVim keymaps](https://github.com/LazyVim/Laz
 | `n` | `<leader>bd` | Delete the current buffer while keeping the window layout (moves to the next listed buffer instead of the file explorer) |
 | `n` | `<leader>yp` | Yank the current file's **absolute** path to the system clipboard |
 | `n` | `<leader>yr` | Yank the current file's **relative** path to the system clipboard |
+| `v` | `<Tab>` | Indent the visual selection and keep it selected (press repeatedly to add more) |
+| `v` | `<S-Tab>` | Dedent the visual selection and keep it selected |
+
+> Tip: press `Shift+V` to select whole lines, then `Tab` to indent them. The indent size follows your `shiftwidth`/`expandtab` settings.
 
 ### Command-line tweaks
 

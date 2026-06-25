@@ -33,6 +33,11 @@ vim.keymap.set("n", "<leader>bd", smart_bufdelete, { desc = "Delete Buffer (keep
 vim.api.nvim_create_user_command("Bd", smart_bufdelete, {})
 vim.cmd([[cnoreabbrev <expr> bd (getcmdtype() == ':' && getcmdline() ==# 'bd') ? 'Bd' : 'bd']])
 
+-- Indent / dedent the visual selection with Tab / Shift-Tab and keep it selected
+-- so you can press Tab repeatedly to add more spaces (Shift+V to select lines).
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent selection" })
+vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Dedent selection" })
+
 -- Copy the current file's absolute path to the system clipboard
 vim.keymap.set("n", "<leader>yp", function()
   local path = vim.fn.expand("%:p")
